@@ -31,7 +31,8 @@
     "sidebar": "Sidebar",
     "text": "Text",
     "theme": "Theme",
-    "typography": "Typography"
+    "typography": "Typography",
+    "background_image": "Background image"
   },
   "labels": {
     "alignment": "Alignment",
@@ -74,6 +75,6 @@
       "title": "Title",
       "subtitle": "Subtitle",
       "normal": "Normal text"
-    },
+    }
   }
 }
