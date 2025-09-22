@@ -36,7 +36,10 @@
   "labels": {
     "alignment": "Alignment",
     "background": "Background",
-    "foreground": "Foreground",
+    "dark": "Dark",
+    "pink": "Pink",
+    "coffee": "Coffee",
+    "background_image": "Background image",
     "grid_gap": "Grid spacing",
     "grid_item_width": "Grid item width",
     "input_corner_radius": "Input corner radius",
