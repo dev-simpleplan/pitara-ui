@@ -23,7 +23,7 @@
     ]
   },
   {
-    "name": "t:general.backround_image",
+    "name": "t:general.background_image",
     "settings": [
       {
         "type": "image_picker",
