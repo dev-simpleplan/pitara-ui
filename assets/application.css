@@ -1,0 +1,177 @@
+/* Global CSS Starts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary--family);
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-primary--family);
+  background-color: var(--color-background);
+}
+
+body{
+    background-image: url('{{ settings.background_image | img_url: master }}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.dark{
+    color: var(--color-foreground);
+}
+
+.white{
+    color: var(--color-background);
+}
+
+body[data-lenis-prevent] {
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  text-wrap: pretty;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    font-family: 'Bezier Sans', sans-serif;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img.ab {
+  position: absolute;
+  inset: 0;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.icon.ab {
+  position: absolute;
+  inset: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+.container-fluid {
+  padding: 0 4%;
+  margin: 0 !important;
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.container-left {
+  padding: 0% 0% 0% 4%;
+  margin: 0 !important;
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.custom-btn{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 88%;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s all ease;
+  border: 1px solid transparent;
+  min-width: 200px;
+}
+
+.custom-btn.white {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.custom-btn.white:hover {
+  border-color: var(--color-background);
+  background-color: transparent;
+  color: var(--color-background);
+}
+
+.custom-btn.dark {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}
+
+.custom-btn.dark:hover {
+  border-color: var(--color-foreground);
+  background-color: transparent;
+  color: var(--color-foreground);
+}
+
+.custom-btn.lined {
+  border-color: var(--color-foreground);
+  background-color: transparent;
+  color: var(--color-foreground);
+
+}
+
+.custom-btn.lined:hover {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}
+
+.head{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.head.center{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

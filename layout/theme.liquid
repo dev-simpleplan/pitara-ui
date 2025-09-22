@@ -2,13 +2,25 @@
 <html lang="{{ request.locale.iso_code }}">
   <head>
     {% # Inlined CSS Variables %}
-    {% render 'css-variables' %}
+  {% render 'css-variables' %}
 
     {% # Load and preload the critical CSS %}
-    {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'application.css' | asset_url | stylesheet_tag: preload: true }}
+
+  {% comment %} {{ 'bezier-sans.ttf' | asset_url | font_face_tag: preload: true, type: 'font/ttf', crossorigin: 'anonymous' }} {% endcomment %}
 
     {% # Social, title, etc. %}
     {% render 'meta-tags' %}
+
+    {% style %}
+      @font-face {
+        font-family: 'Bezier Sans', sans-serif;
+        src: url({{ 'bezier-sans.ttf' | asset_url }}) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+    {% endstyle %}
 
     {{ content_for_header }}
   </head>
