@@ -98,49 +98,68 @@
             </div>
           </div>
         {% when 'slide_4' %}
-             <div class="ss-item slide_2">
-                <div class="container-fluid">
-                <div class="ss-item-in">
-                    <div class="left">
-                    <div class="head">
-                        <h2>{{ block.settings.head }} <img src="https://cdn.shopify.com/s/files/1/0808/9639/3409/files/Group_5_1.svg?v=1758801532" alt="" ></h2>
-                    </div>
-                    <div class="text">
-                        {{ block.settings.text }}
-                    </div>
-                    <div class="ss4_smimg">
-                        <img
-                        src="{{ block.settings.left_image | img_url: 'master' }}"
-                        alt=""
-                        class="icons">
-                    </div>
-                    
-                    </div>
-                    <div class="right">
-                    <div class="ss4_ bigimg">
-                        <img
-                        src="{{ block.settings.right_image |  img_url: 'master' }}"
-                        alt=""
-                        class="icons">
-                    </div>
-                    <div class="ss4_socials">
-                        <p>Follow us on:</p>
-                        <div class="ss4_sm">
-                            <a href="#!">
-                                instagram
-                            </a>
-                            <a href="#!">
-                                youtube
-                            </a>
-                            <a href="#!">
-                                tiktok
-                            </a>
-                        </div>
-                    </div>
-                    </div>
+          <div class="ss-item slide_4">
+            <div class="container-fluid">
+              <div class="ss-item-in">
+                <div class="left">
+                  <div class="head">
+                    <h2>{{ block.settings.head }} <img src="https://cdn.shopify.com/s/files/1/0808/9639/3409/files/Group_5_1.svg?v=1758801532" alt=""></h2>
+                  </div>
+                  <div class="text">
+                    {{ block.settings.text }}
+                  </div>
+                  <div class="ss4_smimg">
+                    <img
+                      src="{{ block.settings.left_image | img_url: 'master' }}"
+                      alt=""
+                      class="icons">
+                  </div>
                 </div>
+                <div class="right">
+                  <div class="ss4_ bigimg pos-rel">
+                    <img
+                      src="{{ block.settings.right_image |  img_url: 'master' }}"
+                      alt=""
+                      class="img ab">
+                  </div>
+                  <div class="ss4_socials">
+                    <p>Follow us on:</p>
+                    <div class="ss4_sm">
+                      <a href="{{ block.settings.insta_url }}" target="_blank">
+                        <img
+                          src="{{ block.settings.insta | img_url: 'master' }}"
+                          alt="Instagram Icon"
+                          class="icons">
+                      </a>
+                      <a href="{{ block.settings.youtube_url }}" target="_blank">
+                        <img
+                          src="{{ block.settings.youtube | img_url: 'master' }}"
+                          alt="Youtube Icon"
+                          class="icons">
+                      </a>
+                      <a href="{{ block.settings.tiktok_url }}" target="_blank">
+                        <img
+                          src="{{ block.settings.tiktok | img_url: 'master' }}"
+                          alt="TikTok Icon"
+                          class="icons">
+                      </a>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+        {% when 'slide_5' %}
+          <div class="ss-item slide_5" style="background-image: url({{ block.settings.background | img_url: 'master' }})">
+            <div class="container-fluid">
+              <div class="ss-item-in pos-rel">
+                <img
+                  src="{{ block.settings.image | img_url: 'master' }}"
+                  alt=""
+                  class="img ab">
+              </div>
+            </div>
+          </div>
       {% else %}
         {% endcase %}
       {% endfor %}
@@ -181,7 +200,8 @@
               "label": "Content"
             }
           ]
-        }, {
+        },
+        {
           "name": "Slide 2",
           "type": "slide_2",
           "limit": 1,
@@ -204,7 +224,8 @@
               "label": "Content"
             }
           ]
-        }, {
+        },
+        {
           "name": "Slide 3",
           "type": "slide_3",
           "limit": 1,
@@ -237,21 +258,63 @@
               "type": "image_picker",
               "id": "left_image",
               "label": "Add Image"
-            }, {
+            },
+            {
               "type": "image_picker",
               "id": "right_image",
               "label": "Add Image"
-            }, {
+            },
+            {
               "type": "textarea",
               "id": "head",
               "label": "Heading"
-            }, {
+            },
+            {
               "type": "richtext",
               "id": "text",
               "label": "Content"
+            }, {
+              "type": "image_picker",
+              "id": "insta",
+              "label": "Instagram Icon"
+            }, {
+              "type": "text",
+              "id": "insta_url",
+              "label": "Instagram URL"
+            }, {
+              "type": "image_picker",
+              "id": "youtube",
+              "label": "Youtube Icon"
+            }, {
+              "type": "text",
+              "id": "youtube_url",
+              "label": "Youtube URL"
+            }, {
+              "type": "image_picker",
+              "id": "tiktok",
+              "label": "TikTok Icon"
+            }, {
+              "type": "text",
+              "id": "tiktok_url",
+              "label": "TikTok URL"
             }
           ]
-        },
+        }, {
+          "name": "Slide 5",
+          "type": "slide_5",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "background",
+              "label": "Background Image"
+            }, {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Add Image"
+            }
+          ]
+        }
       ]
     }
   {% endschema %}

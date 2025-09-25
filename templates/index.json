@@ -44,7 +44,20 @@
             "left_image": "shopify://shop_images/slide4_sm.png",
             "right_image": "shopify://shop_images/slide4_big.jpg",
             "head": "We’re also building a storytelling platform on social media",
-            "text": "<p>To explore the origins and makers behind the products we curate.</p><p></p><p>We are especially proud of content like our <strong>Pride Series on LGBTQ+</strong> themes in Hindu Philosophy – an example of how we use our platform for representation, especially for stories that are often overlooked.</p><p></p><p>It’s all part of our broader vision: <strong>to create a space where people feel seen, heard, and represented with nuance and care.</strong></p>"
+            "text": "<p>To explore the origins and makers behind the products we curate.</p><p>We are especially proud of content like our <strong>Pride Series on LGBTQ+</strong> themes in Hindu Philosophy – an example of how we use our platform for representation, especially for stories that are often overlooked.</p><p>It’s all part of our broader vision: <strong>to create a space where people feel seen, heard, and represented with nuance and care.</strong></p>",
+            "insta": "shopify://shop_images/instagram.svg",
+            "insta_url": "#!",
+            "youtube": "shopify://shop_images/youtube.svg",
+            "youtube_url": "#!",
+            "tiktok": "shopify://shop_images/tiktok.svg",
+            "tiktok_url": "#!"
+          }
+        },
+        "item5":{
+          "type": "slide_5",
+          "settings": {
+            "background": "shopify://shop_images/background_2.jpg?v=1758803726",
+            "image": "shopify://shop_images/family_2.jpg?v=1758803736"
           }
         }
       },
@@ -52,7 +65,8 @@
         "item1",
         "item2",
         "item3",
-        "item4"
+        "item4",
+        "item5"
       ],
       "settings": {
         "stamp": "shopify://shop_images/pitara_stamp.png"
