@@ -53,11 +53,11 @@
             "tiktok_url": "#!"
           }
         },
-        "item5":{
+        "item5": {
           "type": "slide_5",
           "settings": {
-            "background": "shopify://shop_images/background_2.jpg?v=1758803726",
-            "image": "shopify://shop_images/family_2.jpg?v=1758803736"
+            "background": "shopify://shop_images/background_2.jpg",
+            "image": "shopify://shop_images/family_2.jpg"
           }
         }
       },
@@ -69,6 +69,7 @@
         "item5"
       ],
       "settings": {
+        "video": "shopify://files/videos/About us banner animated video.mp4",
         "stamp": "shopify://shop_images/pitara_stamp.png"
       }
     }
