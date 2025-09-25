@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,7 +15,7 @@
         "item1": {
           "type": "slide_1",
           "settings": {
-            "image": "shopify://shop_images/Frame_427324915_1.png?v=1758793667",
+            "image": "shopify://shop_images/Frame_427324915_1.png",
             "head": "Growing up in the U.S., <b>being Indian wasn’t always “cool”</b>",
             "text": "<p>Our Mom wasn’t forcing us into <strong>arranged marriages. Doctor and engineer</strong> weren’t our only career options. And no — our meals weren’t some kind of <strong>digestive gamble</strong> (though they were definitely packed with flavor).<br/><br/>What we saw in media and retail rarely reflected who we really were. <span style=\"text-decoration:underline\">It felt flat, stereotypical, or disconnected — either too traditional, or stripped of culture altogether.</span></p>"
           }
@@ -14,8 +23,8 @@
         "item2": {
           "type": "slide_2",
           "settings": {
-            "left_image": "shopify://shop_images/pitara_family.jpg?v=1758797381",
-            "right_image": "shopify://shop_images/pitara_family_sm.png?v=1758797470",
+            "left_image": "shopify://shop_images/pitara_family.jpg",
+            "right_image": "shopify://shop_images/pitara_family_sm.png",
             "head": "Positive storytelling can shift perceptions & challenge stereotypes.",
             "text": "<p>Just as <strong>French epiceries</strong> and <strong>Italian delicatessens</strong> have shaped how the West sees those cultures – and have elevated them to a place of high regard – we want to do the same through <strong>food, craft,</strong> and <strong>storytelling.</strong></p>"
           }
@@ -24,9 +33,9 @@
           "type": "slide_3",
           "settings": {
             "background": "shopify://shop_images/background_1.jpg",
+            "image": "shopify://shop_images/aditi.png",
             "head": "Pitara means treasure chest in Hindi, Urdu, and Punjabi.",
-            "text": "<p>We work with ethical small businesses to thoughtfully curate hidden gems from across South Asia. We go the extra mile to find products that shine a light on underrepresented communities, and reflect the depth and richness of Desi culture.</p>",
-            "image": "shopify://shop_images/aditi.png"
+            "text": "<p>We work with ethical small businesses to thoughtfully curate hidden gems from across South Asia. We go the extra mile to find products that shine a light on underrepresented communities, and reflect the depth and richness of Desi culture.</p>"
           }
         },
         "item4": {
@@ -35,7 +44,7 @@
             "left_image": "shopify://shop_images/slide4_sm.png",
             "right_image": "shopify://shop_images/slide4_big.jpg",
             "head": "We’re also building a storytelling platform on social media",
-            "text": "<p>Just as <strong>French epiceries</strong> and <strong>Italian delicatessens</strong> have shaped how the West sees those cultures – and have elevated them to a place of high regard – we want to do the same through <strong>food, craft,</strong> and <strong>storytelling.</strong></p>"
+            "text": "<p>To explore the origins and makers behind the products we curate.</p><p></p><p>We are especially proud of content like our <strong>Pride Series on LGBTQ+</strong> themes in Hindu Philosophy – an example of how we use our platform for representation, especially for stories that are often overlooked.</p><p></p><p>It’s all part of our broader vision: <strong>to create a space where people feel seen, heard, and represented with nuance and care.</strong></p>"
           }
         }
       },
