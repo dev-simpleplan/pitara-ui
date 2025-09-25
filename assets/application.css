@@ -13,17 +13,29 @@ body {
   width: 100%;
   font-family: var(--font-primary--family);
   background-color: var(--color-background);
+  position: relative;
 }
 
-body{
-    background-image: url('{{ settings.background_image | img_url: master }}');
+body::after{
+    background-image: url('https://cdn.shopify.com/s/files/1/0808/9639/3409/files/pitara_bg.png?v=1758548143');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 0;
+}
+main{
+    position: relative;
+    z-index: 1;
 }
 
 .dark{
-    color: var(--color-foreground);
+    color: var(--color-dark);
 }
 
 .white{
@@ -64,6 +76,20 @@ ul{
 h1{
     font-family: 'Bezier Sans', sans-serif;
 }
+h2{
+  font-family: 'Bezier Sans', sans-serif;
+  font-size: clamp(32px, 6vw, 42px);
+  font-weight: 467;
+  line-height: 108%;
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+}
+
+h2 b, h2 span{
+  all: inherit;
+  font-weight: 633;
+  display: inline;
+}
 
 .img {
   width: 100%;
@@ -80,13 +106,13 @@ h1{
   position: relative;
 }
 
-.icon {
+.icons {
   width: 100%;
   height: auto;
   max-height: 100%;
 }
 
-.icon.ab {
+.icons.ab {
   position: absolute;
   inset: 0;
 }
@@ -175,3 +201,25 @@ h1{
   justify-content: center;
   text-align: center;
 }
+
+/* About Page */
+
+.ss-item.slide_1 .head .logo{
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ss-item.slide_1 .head {
+  flex-direction: row;
+  gap: 16px;
+}
+.ss-item.slide_1 .text p{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 168%;
+  letter-spacing: 0.02em;
+}
+
+/* About Page Ends */

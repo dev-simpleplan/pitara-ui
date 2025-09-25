@@ -1,16 +1,38 @@
 <!doctype html>
 <html lang="{{ request.locale.iso_code }}">
   <head>
+    {% # Social, title, etc. %}
+    {% render 'meta-tags' %}
+  <!-- Header hook for plugins -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
     {% # Inlined CSS Variables %}
   {% render 'css-variables' %}
 
     {% # Load and preload the critical CSS %}
     {{ 'application.css' | asset_url | stylesheet_tag: preload: true }}
-
-  {% comment %} {{ 'bezier-sans.ttf' | asset_url | font_face_tag: preload: true, type: 'font/ttf', crossorigin: 'anonymous' }} {% endcomment %}
-
-    {% # Social, title, etc. %}
-    {% render 'meta-tags' %}
+    {{ 'responsive.css' | asset_url | stylesheet_tag: preload: true }}
 
     {% style %}
       @font-face {
@@ -28,8 +50,154 @@
   <body>
     {% sections 'header-group' %}
 
-    {{ content_for_layout }}
+    <main role="main">
+      {{ content_for_layout }}
+    </main>
 
     {% sections 'footer-group' %}
+
+    {% comment %} Script {% endcomment %}
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js" defer></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      defer></script>
+    <script src="{{ 'application.js' | asset_url }}" defer></script>
+
+    <script type="application/json" data-ajax-cart-initial-state>
+      {{ cart | json }}
+    </script>
+
+    <script type="module">
+      import '{{ "liquid-ajax-cart-v2.1.2.js" | asset_url }}';
+    </script>
+
+    <script src="{{ 'application.js' | asset_url }}" defer></script>
+    <script>
+      function runWhenInit() {
+        console.log("The current cart state is: ", window.liquidAjaxCart.cart);
+      }
+      
+      if (window.liquidAjaxCart ?. init) { // if Liquid Ajax Cart is already initialized
+        runWhenInit();
+      } else { // wait for Liquid Ajax Cart to be initialized
+        document.addEventListener("liquid-ajax-cart:init", runWhenInit);
+      }
+    </script>
+
+    {% comment %} Smooth Scroll Script {% endcomment %}
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Init Lenis
+        const lenis = new Lenis({
+          duration: 1.2,
+          smoothWheel: true,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
+
+        // 2. GSAP + ScrollTrigger integration
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.scrollerProxy(document.documentElement, {
+          scrollTop(value) {
+            return arguments.length
+              ? lenis.scrollTo(value, {immediate: true})
+              : lenis.scroll;
+          },
+          getBoundingClientRect() {
+            return {
+              top: 0,
+              left: 0,
+              width: window.innerWidth,
+              height: window.innerHeight
+            };
+          },
+          pinType: document.documentElement.style.transform ? "transform" : "fixed"
+        });
+
+        // 3. RAF loop — IMPORTANT: update ScrollTrigger here
+        function raf(time) {
+          lenis.raf(time);
+          ScrollTrigger.update();
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // 4. Header show/hide logic
+        const header = document.querySelector("header");
+        lenis.on("scroll", ({ scroll, direction, limit }) => {
+          const scrollPercentage = (scroll / limit) * 100;
+
+          if (scrollPercentage > 5) {
+            header.classList.add("backdrop");
+          } else {
+            header.classList.remove("backdrop");
+          }
+
+          if (scrollPercentage > 1) {
+            if (direction === 1) {
+              header.style.transform = "translateY(-100%)";
+            } else {
+              header.style.transform = "translateY(0)";
+            }
+          }
+        });
+
+        // 5. Animations
+        const mm = gsap.matchMedia();
+        mm.add("(min-width: 992px)", () => {
+          gsap.utils.toArray(".animate-img").forEach((img) => {
+            gsap.fromTo(
+              img,
+              { y: -50 },
+              {
+                y: 50,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: img,
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: true
+                }
+              }
+            );
+          });
+        });
+
+        const sideScrollSection = document.querySelector('.side-scroll')
+        const container = document.querySelector('.side-scroll-wrapper')
+  
+        if (sideScrollSection && container) {
+          const horizontalLength = container.scrollWidth - window.innerWidth
+  
+          gsap.to(container, {
+            x: - horizontalLength,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: '.side-scroll',
+              start: 'top top',
+              end: () => `+=${horizontalLength}`,
+              scrub: true,
+              pin: true,
+              pinSpacer: false,
+              anticipatePin: 1
+            }
+          })
+        }
+        return() => {
+          ScrollTrigger.getAll().forEach(st => st.kill());
+        };
+        ScrollTrigger.refresh();
+      });
+    </script>
   </body>
 </html>

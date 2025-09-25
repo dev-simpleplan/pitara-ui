@@ -28,7 +28,7 @@
       {
         "type": "image_picker",
         "id": "background_image",
-        "label": "t:general.background_image"
+        "label": "t:labels.background_image"
       }
     ]
   },
@@ -59,7 +59,6 @@
         "default": "#A95C38",
         "label": "t:labels.coffee"
       }
-      
     ]
   }
 ]
