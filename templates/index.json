@@ -28,12 +28,22 @@
             "text": "<p>We work with ethical small businesses to thoughtfully curate hidden gems from across South Asia. We go the extra mile to find products that shine a light on underrepresented communities, and reflect the depth and richness of Desi culture.</p>",
             "image": "shopify://shop_images/aditi.png"
           }
+        },
+        "item4": {
+          "type": "slide_4",
+          "settings": {
+            "left_image": "shopify://shop_images/slide4_sm.png",
+            "right_image": "shopify://shop_images/slide4_big.jpg",
+            "head": "We’re also building a storytelling platform on social media",
+            "text": "<p>Just as <strong>French epiceries</strong> and <strong>Italian delicatessens</strong> have shaped how the West sees those cultures – and have elevated them to a place of high regard – we want to do the same through <strong>food, craft,</strong> and <strong>storytelling.</strong></p>"
+          }
         }
       },
       "block_order": [
         "item1",
         "item2",
-        "item3"
+        "item3",
+        "item4"
       ],
       "settings": {
         "stamp": "shopify://shop_images/pitara_stamp.png"
