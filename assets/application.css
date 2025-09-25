@@ -461,4 +461,13 @@ section.side-scroll{
   display: flex;
 }
 
+/* Video Slide */
+.ss-item.slide_0 .video-div{
+  height: 100%;
+  width: 100%;
+}
+.ss-item.slide_0 {
+  padding: 0;
+}
+
 /* About Page Ends */

@@ -1,7 +1,9 @@
 <section class="side-scroll">
   <div class="side-scroll-wrapper">
-    <div class="ss-item pos-rel video-div">
-      {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, class: 'img ab' }}
+    <div class="ss-item slide_0">
+      <div class="video-div pos-rel">
+        {{ section.settings.video | video_tag: autoplay: true, loop: false, muted: true, controls: false, playsinline: true, class: 'img ab' }}
+      </div>
     </div>
     {% for block in section.blocks %}
       {% case block.type %}

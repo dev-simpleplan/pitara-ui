@@ -3,7 +3,7 @@
   <head>
     {% # Social, title, etc. %}
     {% render 'meta-tags' %}
-  <!-- Header hook for plugins -->
+    <!-- Header hook for plugins -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -18,7 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
-  <link
+    <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -26,7 +26,8 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
+      referrerpolicy="no-referrer">
+  </script>
     {% # Inlined CSS Variables %}
   {% render 'css-variables' %}
 
@@ -36,8 +37,9 @@
 
     {% style %}
       @font-face {
-        font-family: 'Bezier Sans', sans-serif;
-        src: url({{ 'bezier-sans.ttf' | asset_url }}) format('truetype');
+        font-family: 'Bezier Sans'
+        , sans-serif;
+        src: url('{{ 'bezier-sans.ttf' | asset_url }}') format('truetype');
         font-weight: normal;
         font-style: normal;
         font-display: swap;
@@ -52,9 +54,9 @@
 
     <main role="main">
       {{ content_for_layout }}
-    </main>
 
-    {% sections 'footer-group' %}
+      {% sections 'footer-group' %}
+    </main>
 
     {% comment %} Script {% endcomment %}
     <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js" defer></script>
@@ -175,10 +177,10 @@
 
         const sideScrollSection = document.querySelector('.side-scroll')
         const container = document.querySelector('.side-scroll-wrapper')
-  
+        
         if (sideScrollSection && container) {
           const horizontalLength = container.scrollWidth - window.innerWidth
-  
+        
           gsap.to(container, {
             x: - horizontalLength,
             ease: 'none',
