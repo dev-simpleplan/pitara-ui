@@ -21,12 +21,37 @@
                   </div>
                   <div class="stamp">
                     <img
-                      src="https://cdn.shopify.com/s/files/1/0808/9639/3409/files/f1a0e24df3d1fecfca1fb79a430576fe3ee42a4b.png?v=1758698730"
+                      src="{{ section.settings.stamp |  img_url: 'master' }}"
                       alt="Pitara Stamp"
-                      class="icon">
+                      class="icons">
                   </div>
                 </div>
-                <div class="right"></div>
+                <div class="right">
+                    <div class="ss_img1_wrap">
+                        <div class="ss_img1 pos-rel">
+                            <img
+                            src="{{ block.settings.image |  img_url: 'master' }}"
+                            alt="Pitara Owner"
+                            class="img ab">
+                        </div>
+                        <div class="ss_img1_txt">
+                            <p>{{ block.settings.img_loc }}</p>
+                            <p>{{ block.settings.img_time }}</p>
+                        </div>
+                    </div>
+                  {% comment %} <div class="keyhole">
+                    <img
+                      src="{{ section.settings.keyhole |  img_url: 'master' }}"
+                      alt="Pitara Keyhole Icon"
+                      class="icons">
+                  </div>
+                  <div class="key">
+                    <img
+                      src="{{ section.settings.key |  img_url: 'master' }}"
+                      alt="Pitara Keyhole Icon"
+                      class="icons"> {% endcomment %}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

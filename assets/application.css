@@ -210,6 +210,7 @@ h2 b, h2 span{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 .ss-item.slide_1 .head {
   flex-direction: row;
@@ -220,6 +221,62 @@ h2 b, h2 span{
   font-size: 24px;
   line-height: 168%;
   letter-spacing: 0.02em;
+}
+.ss-item.slide_1 .text p span,.ss-item.slide_1 .text p u{
+  font-family: var(--font-head--family);
+  font-weight: 633;
+  font-size: 24px;
+  line-height: 168%;
+  letter-spacing: 0.02em;
+  color: var(--color-pink);
+}
+.ss-item.slide_1 .stamp{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  transform: rotate(25deg);
+}
+.ss-item.slide_1 .stamp img{
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+.ss-item.slide_1 .ss-item-in{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.ss-item.slide_1 .ss-item-in .left{
+  width: 55%;
+}
+.ss-item.slide_1 .ss-item-in .right{
+  width: 40%;
+}
+.ss-item.slide_1 .ss_img1_wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 30px;
+  padding-bottom: 24px;
+  background-color: #EDE5DA;
+  box-shadow: 0 5px 7px -2px #1111116b;
+}
+.ss-item.slide_1 .ss_img1{
+  padding-top: 135%;
+  display: flex;
+}
+.ss-item.slide_1 .ss_img1_txt{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.ss-item.slide_1 .ss_img1_txt p{
+  font-weight: 400;
+  font-size: 13.27px;
+  line-height: 150%;
+  letter-spacing: 1.9px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-coffee);
 }
 
 /* About Page Ends */
