@@ -408,6 +408,7 @@ section.side-scroll{
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-content: space-between;
 }
 .ss-item.slide_4 .left .text{
   display: flex;
@@ -419,6 +420,7 @@ section.side-scroll{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
 }
 .ss-item.slide_4 .right .ss4_socials p{
   font-family: var(--font-head--family);
