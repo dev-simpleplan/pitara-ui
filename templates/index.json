@@ -1,17 +1,23 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "about",
-      "settings": {
-        "stamp": "shopify://shop_images/pitara_stamp.png?v=1758787945"
-      },
       "blocks": {
-        "item1":{
+        "item1": {
           "type": "slide_1",
           "settings": {
+            "image": "shopify://shop_images/aadae9a11e8a04e6b2fb5cec4b43fef227e755bd.jpg",
             "head": "Growing up in the U.S., <b>being Indian wasn’t always “cool”</b>",
-            "text": "<p>Our Mom wasn’t forcing us into <span>arranged marriages.Doctor and engineer</span> weren’t our only career options. And no — our meals weren’t some kind of <span>digestive gamble</span> (though they were definitely packed with flavor).<br><br>What we saw in media and retail rarely reflected who we really were. <u>It felt flat, stereotypical, or disconnected — either too traditional, or stripped of culture altogether.</u></p>",
-            "image": "shopify://shop_images/aadae9a11e8a04e6b2fb5cec4b43fef227e755bd.jpg?v=1758787296",
+            "text": "<p>Our Mom wasn’t forcing us into <strong>arranged marriages.Doctor and engineer</strong> weren’t our only career options. And no — our meals weren’t some kind of <strong>digestive gamble</strong> (though they were definitely packed with flavor).<br/><br/>What we saw in media and retail rarely reflected who we really were. <span style=\"text-decoration:underline\">It felt flat, stereotypical, or disconnected — either too traditional, or stripped of culture altogether.</span></p>",
             "img_loc": "@Kerala india",
             "img_time": "2024"
           }
@@ -19,7 +25,10 @@
       },
       "block_order": [
         "item1"
-      ]
+      ],
+      "settings": {
+        "stamp": "shopify://shop_images/pitara_stamp.png"
+      }
     }
   },
   "order": [
