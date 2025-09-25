@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -15,16 +6,34 @@
         "item1": {
           "type": "slide_1",
           "settings": {
-            "image": "shopify://shop_images/aadae9a11e8a04e6b2fb5cec4b43fef227e755bd.jpg",
+            "image": "shopify://shop_images/Frame_427324915_1.png?v=1758793667",
             "head": "Growing up in the U.S., <b>being Indian wasn’t always “cool”</b>",
-            "text": "<p>Our Mom wasn’t forcing us into <strong>arranged marriages.Doctor and engineer</strong> weren’t our only career options. And no — our meals weren’t some kind of <strong>digestive gamble</strong> (though they were definitely packed with flavor).<br/><br/>What we saw in media and retail rarely reflected who we really were. <span style=\"text-decoration:underline\">It felt flat, stereotypical, or disconnected — either too traditional, or stripped of culture altogether.</span></p>",
-            "img_loc": "@Kerala india",
-            "img_time": "2024"
+            "text": "<p>Our Mom wasn’t forcing us into <strong>arranged marriages. Doctor and engineer</strong> weren’t our only career options. And no — our meals weren’t some kind of <strong>digestive gamble</strong> (though they were definitely packed with flavor).<br/><br/>What we saw in media and retail rarely reflected who we really were. <span style=\"text-decoration:underline\">It felt flat, stereotypical, or disconnected — either too traditional, or stripped of culture altogether.</span></p>"
+          }
+        },
+        "item2": {
+          "type": "slide_2",
+          "settings": {
+            "left_image": "shopify://shop_images/pitara_family.jpg?v=1758797381",
+            "right_image": "shopify://shop_images/pitara_family_sm.png?v=1758797470",
+            "head": "Positive storytelling can shift perceptions & challenge stereotypes.",
+            "text": "<p>Just as <strong>French epiceries</strong> and <strong>Italian delicatessens</strong> have shaped how the West sees those cultures – and have elevated them to a place of high regard – we want to do the same through <strong>food, craft,</strong> and <strong>storytelling.</strong></p>"
+          }
+        },
+        "item3": {
+          "type": "slide_3",
+          "settings": {
+            "background": "shopify://shop_images/background_1.jpg",
+            "head": "Pitara means treasure chest in Hindi, Urdu, and Punjabi.",
+            "text": "<p>We work with ethical small businesses to thoughtfully curate hidden gems from across South Asia. We go the extra mile to find products that shine a light on underrepresented communities, and reflect the depth and richness of Desi culture.</p>",
+            "image": "shopify://shop_images/aditi.png"
           }
         }
       },
       "block_order": [
-        "item1"
+        "item1",
+        "item2",
+        "item3"
       ],
       "settings": {
         "stamp": "shopify://shop_images/pitara_stamp.png"

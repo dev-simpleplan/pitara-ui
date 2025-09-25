@@ -78,14 +78,14 @@ h1{
 }
 h2{
   font-family: 'Bezier Sans', sans-serif;
-  font-size: clamp(32px, 6vw, 42px);
+  font-size: clamp(32px, 4vw, 42px);
   font-weight: 467;
   line-height: 108%;
   text-transform: capitalize;
   letter-spacing: 0.01em;
 }
 
-h2 b, h2 span{
+h2 b, h2 span, h2 strong{
   all: inherit;
   font-weight: 633;
   display: inline;
@@ -204,7 +204,27 @@ h2 b, h2 span{
 
 /* About Page */
 
-.ss-item.slide_1 .head .logo{
+section.side-scroll{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.side-scroll-wrapper {
+  display: flex;
+  width: calc(4 * 100vw);
+  height: 100%;
+  padding: 20px 0;
+  align-items: center;
+}
+.ss-item {
+  flex: 0 0 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ss-item .logo{
   width: 32px;
   height: 32px;
   display: flex;
@@ -212,29 +232,45 @@ h2 b, h2 span{
   justify-content: center;
   flex-shrink: 0;
 }
-.ss-item.slide_1 .head {
+.ss-item .head {
   flex-direction: row;
   gap: 16px;
+  margin-bottom: 0;
 }
-.ss-item.slide_1 .text p{
+.ss-item.slide_1 .text{
+  margin-top: 70px;
+  max-width: 73ch;
+  text-wrap: pretty;
+}
+/* .ss-item.slide_1 .head h2{
+  font-size: clamp(24px, 4vw, 38px);
+} */
+.ss-item .text p{
   font-weight: 400;
   font-size: 24px;
   line-height: 168%;
   letter-spacing: 0.02em;
 }
-.ss-item.slide_1 .text p span,.ss-item.slide_1 .text p u{
+.ss-item .text p span,.ss-item .text p u, .ss-item .text p strong{
   font-family: var(--font-head--family);
   font-weight: 633;
   font-size: 24px;
-  line-height: 168%;
+  line-height: 160%;
   letter-spacing: 0.02em;
   color: var(--color-pink);
+}
+.ss-item.slide_1 .text p span,.ss-item.slide_1 .text p u, .ss-item.slide_1 .text p strong{
+  color: var(--color-pink);
+}
+.ss-item.slide_2 .text p span,.ss-item.slide_2 .text p u, .ss-item.slide_2 .text p strong{
+  color: var(--color-coffee);
 }
 .ss-item.slide_1 .stamp{
   width: 100px;
   height: 100px;
   display: flex;
   transform: rotate(25deg);
+  margin-top: 32px;
 }
 .ss-item.slide_1 .stamp img{
   aspect-ratio: 1/1;
@@ -246,37 +282,105 @@ h2 b, h2 span{
   align-items: flex-start;
 }
 .ss-item.slide_1 .ss-item-in .left{
-  width: 55%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .ss-item.slide_1 .ss-item-in .right{
-  width: 40%;
+  width: 35%;
+  display: flex;
+  max-height: 560px;
 }
-.ss-item.slide_1 .ss_img1_wrap{
+.ss-item.slide_1 .ss-item-in .right img{
+  object-fit: contain;
+}
+
+/* Slide 2 */
+.ss-item.slide_2 .ss-item-in{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.ss-item.slide_2 .left{
+  width: 55%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
+  padding-right: 40px;
+}
+.ss-item.slide_2 .stamp{
+  position: absolute;
+  bottom: 200px;
+  right: 0;
+  width: 100px;
+  height: 100px;
+}
+.ss-item.slide_2 .right{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
+}
+.ss2_bigimg{
+  padding-top: 70%;
+}
+.ss2_smimg img{
+  object-fit: contain;
+}
+.ss2_smimg{
+  max-height: 300px;
+  display: flex;
+}
+.ss-item.slide_2 .right .text{
+  max-width: 59ch;
+  margin-right: auto;
+}
+
+/* Slide 3 */
+.ss3_img img{
+  object-fit: contain;
+}
+.ss3_img{
+  display: flex;
+  max-height: 280px;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+.ss-item.slide_3 .container-fluid{
+  height: 100%;
+}
+.ss-item.slide_3 .ss-item-in{
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+.ss-item.slide_3 .text p, .ss-item.slide_3 h2{
+  color: var(--color-background);
+  text-transform: none;
+}
+.ss-item.slide_3 .text{
+  max-width: 81ch;
+}
+.ss-item.slide_3 .head{
+  max-width: 80ch;
+}
+.ss-item.slide_3 .txt_wrap{
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 30px;
-  padding-bottom: 24px;
-  background-color: #EDE5DA;
-  box-shadow: 0 5px 7px -2px #1111116b;
 }
-.ss-item.slide_1 .ss_img1{
-  padding-top: 135%;
-  display: flex;
-}
-.ss-item.slide_1 .ss_img1_txt{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.ss-item.slide_1 .ss_img1_txt p{
-  font-weight: 400;
-  font-size: 13.27px;
-  line-height: 150%;
-  letter-spacing: 1.9px;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--color-coffee);
-}
+
+
 
 /* About Page Ends */

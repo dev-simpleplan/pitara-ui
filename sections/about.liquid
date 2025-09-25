@@ -27,30 +27,72 @@
                   </div>
                 </div>
                 <div class="right">
-                    <div class="ss_img1_wrap">
-                        <div class="ss_img1 pos-rel">
-                            <img
-                            src="{{ block.settings.image |  img_url: 'master' }}"
-                            alt="Pitara Owner"
-                            class="img ab">
-                        </div>
-                        <div class="ss_img1_txt">
-                            <p>{{ block.settings.img_loc }}</p>
-                            <p>{{ block.settings.img_time }}</p>
-                        </div>
+                  <img
+                    src="{{ block.settings.image |  img_url: 'master' }}"
+                    alt=""
+                    class="icons">
+                </div>
+              </div>
+            </div>
+          </div>
+        {% when 'slide_2' %}
+          <div class="ss-item slide_2">
+            <div class="container-fluid">
+              <div class="ss-item-in">
+                <div class="left">
+                  <div class="head">
+                    <div class="logo">
+                      <img
+                        src="https://cdn.shopify.com/s/files/1/0808/9639/3409/files/Group_7.svg?v=1758698597"
+                        alt="Pitara Brand Icon"
+                        class="icons">
                     </div>
-                  {% comment %} <div class="keyhole">
+                    <h2>{{ block.settings.head }}</h2>
+                  </div>
+                  <div class="ss2_bigimg pos-rel">
                     <img
-                      src="{{ section.settings.keyhole |  img_url: 'master' }}"
-                      alt="Pitara Keyhole Icon"
+                      src="{{ block.settings.left_image | img_url: 'master' }}"
+                      alt=""
+                      class="img ab">
+                  </div>
+                  <div class="stamp">
+                    <img
+                      src="{{ section.settings.stamp |  img_url: 'master' }}"
+                      alt="Pitara Stamp"
                       class="icons">
                   </div>
-                  <div class="key">
+                </div>
+                <div class="right">
+                  <div class="ss2_smimg">
                     <img
-                      src="{{ section.settings.key |  img_url: 'master' }}"
-                      alt="Pitara Keyhole Icon"
-                      class="icons"> {% endcomment %}
+                      src="{{ block.settings.right_image |  img_url: 'master' }}"
+                      alt=""
+                      class="icons">
                   </div>
+                  <div class="text">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% when 'slide_3' %}
+          <div class="ss-item slide_3">
+            <div class="container-fluid">
+              <div class="ss-item-in" style="background-image: url({{ block.settings.background |  img_url: 'master' }});">
+                <div class="txt_wrap">
+                  <div class="head">
+                    <h2>{{ block.settings.head }}</h2>
+                  </div>
+                  <div class="text">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+                <div class="ss3_img">
+                  <img
+                    src="{{ block.settings.image |  img_url: 'master' }}"
+                    alt=""
+                    class="icons">
                 </div>
               </div>
             </div>
@@ -73,14 +115,6 @@
           "type": "image_picker",
           "id": "stamp",
           "label": "Add your stamp"
-        }, {
-          "type": "image_picker",
-          "id": "key",
-          "label": "Add key icon"
-        }, {
-          "type": "image_picker",
-          "id": "keyhole",
-          "label": "Add keyhole icon"
         }
       ],
       "blocks": [
@@ -93,25 +127,60 @@
               "type": "image_picker",
               "id": "image",
               "label": "Add Image"
-            },
-            {
+            }, {
               "type": "textarea",
               "id": "head",
               "label": "Heading"
-            },
-            {
+            }, {
               "type": "richtext",
               "id": "text",
               "label": "Content"
-            },
+            }
+          ]
+        }, {
+          "name": "Slide 2",
+          "type": "slide_2",
+          "limit": 1,
+          "settings": [
             {
-              "type": "text",
-              "id": "img_loc",
-              "label": "Add Image Label"
+              "type": "image_picker",
+              "id": "left_image",
+              "label": "Add Image"
             }, {
-              "type": "text",
-              "id": "img_time",
-              "label": "Add Image Label"
+              "type": "image_picker",
+              "id": "right_image",
+              "label": "Add Image"
+            }, {
+              "type": "textarea",
+              "id": "head",
+              "label": "Heading"
+            }, {
+              "type": "richtext",
+              "id": "text",
+              "label": "Content"
+            }
+          ]
+        }, {
+          "name": "Slide 3",
+          "type": "slide_3",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "background",
+              "label": "Background Image"
+            }, {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Add Image"
+            }, {
+              "type": "textarea",
+              "id": "head",
+              "label": "Heading"
+            }, {
+              "type": "richtext",
+              "id": "text",
+              "label": "Content"
             }
           ]
         }
